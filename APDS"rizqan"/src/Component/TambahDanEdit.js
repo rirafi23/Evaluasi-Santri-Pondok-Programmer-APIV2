@@ -78,8 +78,13 @@ class Editdata extends React.Component {
           Alasan_Layak_PIP: this.state.TextInput_Alasan_Layak_PIP
         }
       )
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+      .then(res =>{ 
+      alert ('succes')
+      console.log(res)})
+      
+      .catch(err =>{ 
+      alert('conection error')
+      console.log(err)})
   }
   hapusdata = () => {
     axios
@@ -90,10 +95,17 @@ class Editdata extends React.Component {
         }
       )
 
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
-
-    this.props.navigation.navigate('Tampildata')
+    .then(res =>{ 
+      alert ('succes')
+      console.log(res)
+      this.props.navigation.navigate('Tampildata')
+    })
+      
+      .catch(err =>{ 
+      alert('conection error')
+      console.log(err)})  
+    
+    
   }
 
   render () {
